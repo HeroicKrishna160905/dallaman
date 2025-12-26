@@ -83,7 +83,7 @@ def dallaman_ode(t, x, p):
     Q_sto = Q_sto1 + Q_sto2
     Ra = f * k_abs * Q_gut / BW
 
-    # gastric emptying nonlinear function (same tanh form as MATLAB)
+    # gastric emptying nonlinear function 
     k_empt = k_min + (k_max - k_min) / 2.0 * (
         np.tanh(aa * (Q_sto - b * D)) - np.tanh(cc * (Q_sto - d * D)) + 2.0
     )
